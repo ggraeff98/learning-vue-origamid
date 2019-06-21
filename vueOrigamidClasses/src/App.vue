@@ -5,7 +5,16 @@
 <script>
 export default {
   name: 'App',
-  components: {}
+  components: {
+
+  },
+
+  data: {
+
+  },
+  funtion: {
+
+  }
 }
 </script>
 
