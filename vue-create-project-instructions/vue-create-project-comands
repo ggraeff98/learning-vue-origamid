@@ -1,0 +1,7 @@
+vue init webpack nomeDoProjeto
+
+npm run dev
+
+
+ 
+
