@@ -1,5 +1,7 @@
 <template>
-  <div id="app"></div>
+  <div id="app">
+
+  </div>
 </template>
 
 <script>
@@ -9,8 +11,10 @@ export default {
 
   },
 
-  data: {
+  data () {
+    return {
 
+    }
   },
   funtion: {
 
