@@ -1,6 +1,12 @@
 <template>
-  <div id="app">
-
+  <div>
+     <div id="app">
+      {{$data.$empresa}}
+      {{produto}}
+      <input type="number" v-model="lado">
+      Perímetro: {{lado*4}}
+      Área: {{lado*lado}}
+    </div>
   </div>
 </template>
 
@@ -13,9 +19,12 @@ export default {
 
   data () {
     return {
-
+      $empresa: 'Apple',
+      produto: 'iPhone',
+      lado: 0
     }
   },
+
   funtion: {
 
   }
