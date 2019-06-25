@@ -1,0 +1,8 @@
+{
+  "google": [
+    { "id": 1, "name": "Google", "latestPrice": 1500, "marketCap": 1200}
+  ],
+  "apple": [
+    { "id": 2, "name": "Apple", "latestPrice": 1000, "marketCap": 1500}
+  ]
+}
