@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-
+    <p> {{total}} </p>
   </div>
 </template>
 
@@ -13,7 +13,8 @@ export default {
 
   data () {
     return {
-
+      preco: 59,
+      desconto: 10
     }
   },
   funtion: {
@@ -23,7 +24,9 @@ export default {
 
   },
   computed: {
-
+    total () {
+      return this.preco - this.desconto
+    }
   }
 }
 </script>
