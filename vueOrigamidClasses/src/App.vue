@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-
+    <div v-html="list" v-once></div>
   </div>
 </template>
 
@@ -13,7 +13,7 @@ export default {
 
   data () {
     return {
-
+      list: '<ul><li>Item 1</li><li>Item 2</li><li>Item 3</li></ul>'
     }
   },
   funtion: {
