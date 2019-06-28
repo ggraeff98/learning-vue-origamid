@@ -1,6 +1,12 @@
 <template>
   <div id="app">
-    <p> {{total}} </p>
+   <input type="text" v-model="cep" placeholder="cep here" maxlength="8" >
+   <h1>{{cep}}</h1>
+   <ul>
+     <li v-for="(valor, key) in endereco" :key="key">
+       {{key}}: {{valor}}
+     </li>
+   </ul>
   </div>
 </template>
 
@@ -13,8 +19,8 @@ export default {
 
   data () {
     return {
-      preco: 59,
-      desconto: 10
+      cep: '',
+      endereco: {}
     }
   },
   funtion: {
@@ -23,9 +29,15 @@ export default {
   methods: {
 
   },
-  computed: {
-    total () {
-      return this.preco - this.desconto
+  watch: {
+    cep (cep) {
+      if (cep.length === 8) {
+        fetch(`https://viacep.com.br/ws/${cep}/json/`)
+          .then(recive => recive.json())
+          .then(recive => {
+            this.endereco = recive
+          })
+      }
     }
   }
 }
